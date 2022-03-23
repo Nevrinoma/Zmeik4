@@ -8,7 +8,18 @@ namespace Zmeik4
     {
         static void Main(string[] args)
         {
-            Console.SetWindowSize(81, 41);
+            //Console.SetWindowSize(81, 41);
+            VerticalLine v1 = new VerticalLine(0, 10, 5, '%');
+            Draw(v1);
+
+
+
+
+
+
+
+
+
 
             Point p=new Point(4,5,'¤');
             Snake snake = new Snake(p, 4, Direction.RIGHT);
@@ -43,7 +54,7 @@ namespace Zmeik4
                 Thread.Sleep(100);
                 snake.Move();
 			}
-
+            /*
             HorizontalLine upLine=new HorizontalLine(0,80,0,'#');
             HorizontalLine downLine = new HorizontalLine(0, 80, 40, '#');
             VerticalLine leftLine = new VerticalLine(0, 40, 0, '#');
@@ -52,12 +63,15 @@ namespace Zmeik4
             downLine.Draw();
             leftLine.Draw();
             rightLine.Draw();
-                
+            */  
 
 
             Console.ReadLine();
         }
-
+        static void Draw(Figure figure)
+		{
+            figure.Draw();
+		}
     }
 
 }
