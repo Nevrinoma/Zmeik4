@@ -11,7 +11,7 @@ namespace Zmeik4
 		protected List<Point> pList;
 
 
-		public void Drow()
+		public void Draw()
 		{
 			foreach (Point p in pList)
 			{
