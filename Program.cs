@@ -13,11 +13,11 @@ namespace Zmeik4
 			Walls walls = new Walls(80, 40);// задаем аргументы для вывода стенок игрового поля
 			walls.Draw();// выводим стенки в консоль
 
-			Point p = new Point(4, 5, '#');//создание символа змейки и аргументов
+			Point p = new Point(4, 5, '©');//создание символа змейки и аргументов
 			Snake snake = new Snake(p, 4, Direction.RIGHT); //тело змейки
 			snake.Draw();// вывод змейки
 
-			FoodCreator foodCreator = new FoodCreator(80, 40, '&'); //допустимые значения для появления еды
+			FoodCreator foodCreator = new FoodCreator(80, 40, 'Ø'); //допустимые значения для появления еды
 			Point food = foodCreator.CreateFood();  //появление еды
 			food.Draw();// вывод в консоль еды
 
