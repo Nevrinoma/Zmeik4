@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Zmeik4
 {
-	enum Direction
-	{
+	enum Direction //класс перечесления направлений
+	{// сами направления
 		LEFT,
 		RIGHT,
 		UP,

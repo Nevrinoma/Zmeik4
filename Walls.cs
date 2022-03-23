@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Zmeik4
 {
-	internal class Walls
+	internal class Walls//класс для стен
 	{
-		List<Figure> wallList;
+		List<Figure> wallList;//список длязначений стен
 
-		public Walls(int mapWidth, int mapHeight)
+		public Walls(int mapWidth, int mapHeight)//конструктор, копирующий размер поля 
 		{
 			wallList = new List<Figure>();
 
@@ -26,23 +26,23 @@ namespace Zmeik4
 			wallList.Add(rightLine);
 		}
 
-		internal bool IsHit(Figure figure)
+		internal bool IsHit(Figure figure)//метод для значений класса "figure"
 		{
-			foreach (var wall in wallList)
+			foreach (var wall in wallList)//перебор списка wallList
 			{
-				if (wall.IsHit(figure))
+				if (wall.IsHit(figure))//проверка класса фигуры на столкновение со стеной
 				{
-					return true;
+					return true;//возврат
 				}
 			}
-			return false;
+			return false;//возврат
 		}
 
-		public void Draw()
+		public void Draw()//метод вывода стен в консоль
 		{
-			foreach (var wall in wallList)
+			foreach (var wall in wallList)//перебор количества нужных для вывода значений в списке
 			{
-				wall.Draw();
+				wall.Draw();//вывод
 			}
 		}
 	}

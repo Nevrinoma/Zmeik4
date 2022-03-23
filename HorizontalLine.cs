@@ -9,13 +9,13 @@ namespace Zmeik4
 	internal class HorizontalLine : Figure
 	{
 		
-		public HorizontalLine(int xLeft,int xReight,int y,char sym)
+		public HorizontalLine(int xLeft,int xReight,int y,char sym) //конструктор использующий аргументы координат от и до по "х",комер строки(коордлинаты по "у") и символ стенки
 		{ 
-			pList = new List<Point>();
-			for (int x = xLeft; x <= xReight; x++)
+			pList = new List<Point>(); //список для "Point"
+			for (int x = xLeft; x <= xReight; x++) //заполнение от "х" начала до "х" конца, путем перебора до ограничения 
 			{
-				Point p = new Point(x, y, sym);
-				pList.Add(p);
+				Point p = new Point(x, y, sym); //создание обьекта
+				pList.Add(p);// добавление обьекта в список
 			}
 		}
 
