@@ -17,7 +17,7 @@ namespace Zmeik4
 			Snake snake = new Snake(p, 4, Direction.RIGHT);
 			snake.Draw();
 
-			FoodCreator foodCreator = new FoodCreator(82, 42, '&');
+			FoodCreator foodCreator = new FoodCreator(80, 40, '&');
 			Point food = foodCreator.CreateFood();
 			food.Draw();
 
