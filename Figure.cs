@@ -23,11 +23,9 @@ namespace Zmeik4
 			foreach (var p in pList)
 			{
 				if (figure.IsHit(p))
-				{
 					return true;
-				}
-				return false;
 			}
+			return false;
 		}
 
 		private bool IsHit(Point point)

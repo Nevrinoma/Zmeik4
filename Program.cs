@@ -10,7 +10,7 @@ namespace Zmeik4
 		{
 			Console.SetWindowSize(81, 41);
 
-			Walls walls = new Walls(80, 25);
+			Walls walls = new Walls(80, 40);
 			walls.Draw();
 
 			Point p = new Point(4, 5, '#');
