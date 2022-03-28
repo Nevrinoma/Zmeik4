@@ -7,20 +7,20 @@ using System.Threading.Tasks;
 
 namespace Zmeik4
 {
-    internal class Video
+    internal class Video //класс для подобия мини проигрывателя
     {
-        public void video()
+        public void video() //функция для проигрывателя
         {
 
-            for (int i = 0; i <= 100; i++)
+            for (int i = 0; i <= 100; i++) // отсчет процентов 
             {
                 Console.Write($"\rProgress: {i}%   ");
                 Thread.Sleep(25);
             }
             Console.Write("\rDone!          ");
             Thread.Sleep(200);
-            Console.Clear();
-            Console.WriteLine(@"
+            Console.Clear();                                  // переключение между картинок с призраками
+            Console.WriteLine(@"                       
      .-.
    .'   `.
    :g g   :

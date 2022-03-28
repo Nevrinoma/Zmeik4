@@ -8,14 +8,14 @@ using System.Windows;
 
 namespace Zmeik4
 {
-    internal class Menu
+    internal class Menu // класс главного меню программы
     {
-        public void MainMenu()
+        public void MainMenu() //функция с бесконечным циклом и приемом рещений
         {
-            MessageBox.Show("Welcome to the Snake Game!", "Made by Nevrinoma");
-            while (true)
+            MessageBox.Show("Welcome to the Snake Game!", "Made by Nevrinoma"); //приветствие через окно
+            while (true) // бесконечный цикл
             {
-                Console.Write("Enter you Name >>> ");
+                Console.Write("Enter you Name >>> "); //знакомство для вывода имени в окно
                 string nickname = Console.ReadLine();
                 MessageBoxResult result = MessageBox.Show($"{nickname}, let's open the Main Menu?", "The Snake Game",MessageBoxButton.YesNo);
                 if (result==MessageBoxResult.Yes)
@@ -24,38 +24,41 @@ namespace Zmeik4
                     string menuchoice = Console.ReadLine();
                     if (menuchoice == "1")
                     {
-                        Console.Clear();
+                        Console.Clear(); //чистка консоли
                         SnakeGame zmeika = new SnakeGame();
-                        zmeika.Snakegame();
+                        zmeika.Snakegame(); //запуск змейки
                     }
                     if (menuchoice == "2")
                     {
-                        Console.Clear();
+                        Console.Clear();//чистка консоли
                         CarGame cars = new CarGame();
-                        cars.Cargame();
+                        cars.Cargame(); // запуск машинок
                     }
                     if (menuchoice == "3")
                     {
-                        Console.Clear();
-                        ScoreTab();
+                        Console.Clear();//чистка консоли
+                        ScoreTab(); // запуск таблицы
                     }
                     if (menuchoice == "4")
                     {
-                        Console.Clear();
+                        Console.Clear();//чистка консоли
                         Video st = new Video();
-                        st.video();
+                        st.video(); // запуск слайд шоу
                     }
                     if (menuchoice == "5")
                     {
-                        Console.Clear();
-                        Console.Beep();
+                        Console.Clear();//чистка консоли
+                        Console.Beep(); // запуск выхода
                     }
                     
                 }
-
-                void ScoreTab()
+                else
+	{
+                 Console.Beep(); // запуск выхода
+	}
+                void ScoreTab()  // метод чтения файла и вывод текста из файла в консоль
                 {
-                    Console.Clear();
+                    Console.Clear(); // запуск выхода
                     StreamReader from_file = new StreamReader(@"..\..\ScoreTab.txt");
                     string text = from_file.ReadToEnd();
                     Console.WriteLine(text);
@@ -70,6 +73,6 @@ namespace Zmeik4
             }
         }
 
-
+        Console.ReadLine();
     }
 }

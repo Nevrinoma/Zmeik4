@@ -69,15 +69,15 @@ namespace Zmeik4
 			WriteText("                     ", xOffset + 2, yOffset++);
 			WriteText("Made by Nevrinoma", xOffset + 1, yOffset++);
 			WriteText("============================", xOffset, yOffset++);
-			Thread.Sleep(1000);
-			Console.Clear();
+			Thread.Sleep(800);
+			Console.Clear();// чистка консоли
 			Console.Write("Enter your name please >>> ");
-			string nickname = Console.ReadLine();
-			MessageBox.Show($"{nickname}, Your score is >>> {score}", "Game over!");
+			string nickname = Console.ReadLine();// ввод имени игрока 
+			MessageBox.Show($"{nickname}, Your score is >>> {score}", "Game over!");// вывод окна с итоговыми очками
 			if (score >= 1)
 			{
-				StreamWriter to_file = new StreamWriter(@"..\..\ScoreTab.txt", true);
-				to_file.WriteLine(nickname + " >>> " + score);
+				StreamWriter to_file = new StreamWriter(@"..\..\ScoreTab.txt", true); //запись в файл если счет больше 1 очка
+				to_file.WriteLine(nickname + " >>> \n" + score);
 				to_file.Close();
 			}
 		}
@@ -85,7 +85,7 @@ namespace Zmeik4
 		static void WriteText(String text, int xOffset, int yOffset)// метод для вывода информации в определенной позиции с 3 аргументами
 		{
 			Console.SetCursorPosition(xOffset, yOffset);// вывод в консоль в определенной позиции
-			Console.WriteLine(text);
+			Console.WriteLine(text);// вывод переменной в консоль
 		}
     }
 }
