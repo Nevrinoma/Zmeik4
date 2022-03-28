@@ -8,8 +8,9 @@ namespace Zmeik4
 {
 	internal class Snake : Figure //наследственный класс
 	{
+		int score = 0;
 		Direction direction; //для направлений движения из "enum"
-		public Snake(Point tail,int lenght,Direction _direction)// конструктор змейка с аргументами
+		public Snake(Point tail,int lenght,Direction _direction,int score)// конструктор змейка с аргументами
 		{
 			direction = _direction;//приравнение направления
 			pList = new List<Point>();//генерация списка
@@ -20,6 +21,15 @@ namespace Zmeik4
 				pList.Add(p);// добавление ячейки тела(символа)
 			}
 		}
+
+		public int ScorePoint()
+		{
+			score++; //прибавление очков
+			Console.SetCursorPosition(69, 39); //установка позиции Score
+			Console.WriteLine($"Score: {score}"); //вывод
+			return score;
+		}
+
 		internal void Move()//метод движения
 		{
 			Point tail = pList.First();//хвост ставится на первую позицию в списке

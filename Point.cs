@@ -11,8 +11,10 @@ namespace Zmeik4
 		public int x; // значение "х"
 		public int y; // значение "у"
 		public char sym; // вид символа
+        private int v1;
+        private int v2;
 
-		public Point() //пустой конструктор
+        public Point() //пустой конструктор
 		{
 		}
 		public Point(int x, int y, char sym) //конструктор с аргументами по позициям и виду символа
@@ -27,7 +29,14 @@ namespace Zmeik4
 			y = p.y; // замена предедущего значение на новое
 			sym = p.sym;
 		}
-		public void Move(int offset,Direction direction) //метод для передвижения змейки по игровому полю
+
+        public Point(int v1, int v2)
+        {
+            this.v1 = v1;
+            this.v2 = v2;
+        }
+
+        public void Move(int offset,Direction direction) //метод для передвижения змейки по игровому полю
 		{
 			if (direction==Direction.RIGHT) //меняет направление на выбранную из списка "enum direction" сторону, путем распознования нажатой кнопки
 			{

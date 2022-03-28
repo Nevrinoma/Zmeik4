@@ -25,6 +25,7 @@ namespace Zmeik4
 			wallList.Add(leftLine);
 			wallList.Add(rightLine);
 		}
+		
 
 		internal bool IsHit(Figure figure)//метод для значений класса "figure"
 		{
