@@ -53,9 +53,9 @@ namespace Zmeik4
                     
                 }
                 else
-	{
+	            {
                  Console.Beep(); // запуск выхода
-	}
+	            }
                 void ScoreTab()  // метод чтения файла и вывод текста из файла в консоль
                 {
                     Console.Clear(); // запуск выхода
